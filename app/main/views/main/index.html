@@ -1,0 +1,21 @@
+<:Title>
+  Home
+
+<:Body>
+  <h1>{{title}}</h1>
+  Edited: <:datetime_picker value="{{edited}}" date_format='%d-%m-%Y' />
+  <br>
+  Read: <:datetime_picker time={{true}} value="{{read}}" date_format='%d-%m-%Y %H:%M' />
+  <br>
+  <span class="first">
+      Author:
+      <:autocomplete reference={{true}} collection="{{store._authors}}" field="surname" value="{{author}}" />
+      {{author.surname}}
+  </span>
+  <br>
+  <span class="second">
+      Coauthor:
+      <:autocomplete collection="{{store._authors}}" field="surname" value="{{coauthor}}" />
+      {{coauthor}}
+  </span>
+
